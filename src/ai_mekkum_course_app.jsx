@@ -1041,16 +1041,29 @@ function WeekDetailPage({ weekData, weeks, onBack, onWeekChange }) {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-blue-50 text-gray-900 flex">
+      {/* 상단 네비게이션 바 */}
+      <nav className="fixed top-0 left-0 right-0 bg-white border-b-2 border-gray-200 shadow-md z-50">
+        <div className="max-w-7xl mx-auto px-4 py-3">
+          <ul className="flex items-center gap-6 text-sm">
+            <li><a href="https://aimekkum.me/index.html" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">홈</a></li>
+            <li><a href="https://aimekkum.me/ai_edu.html" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">AI 교육자료</a></li>
+            <li><span className="text-indigo-600 font-bold">🚀 AI 10주 코스</span></li>
+            <li><a href="https://aimekkum.me/portfolio.html" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">나의 작업물</a></li>
+            <li><a href="https://aimekkum.me/about.html" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">About</a></li>
+          </ul>
+        </div>
+      </nav>
+
       {/* 모바일 햄버거 메뉴 */}
       <button
         onClick={() => setSidebarOpen(!sidebarOpen)}
-        className="lg:hidden fixed top-4 left-4 z-50 bg-blue-600 text-white p-3 rounded-lg shadow-lg"
+        className="lg:hidden fixed top-16 left-4 z-50 bg-blue-600 text-white p-3 rounded-lg shadow-lg"
       >
         {sidebarOpen ? '✕' : '☰'}
       </button>
 
       {/* 왼쪽 사이드바 - 주차별 목차 */}
-      <aside className={`w-64 bg-white border-r-2 border-gray-200 fixed h-screen overflow-y-auto shadow-lg transition-transform z-40 ${
+      <aside className={`w-64 bg-white border-r-2 border-gray-200 fixed h-screen overflow-y-auto shadow-lg transition-transform z-40 mt-14 ${
         sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
       }`}>
         <div className="p-4 border-b-2 border-indigo-200 bg-gradient-to-r from-indigo-50 to-purple-50 sticky top-0 z-10">
@@ -1118,9 +1131,9 @@ function WeekDetailPage({ weekData, weeks, onBack, onWeekChange }) {
       )}
 
       {/* 메인 컨텐츠 */}
-      <main className="flex-1 lg:ml-64 p-4 lg:p-6">
+      <main className="flex-1 lg:ml-64 p-4 lg:p-6 mt-14">
         {/* 헤더 */}
-        <header className="max-w-6xl mx-auto mb-8 mt-16 lg:mt-0">
+        <header className="max-w-6xl mx-auto mb-8">
           <div className="bg-white rounded-2xl shadow-lg p-6 lg:p-8 border-2 border-blue-200">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-3xl lg:text-4xl font-bold text-blue-600">Week {weekData.week}</span>
@@ -1397,7 +1410,20 @@ export default function AIMekkumCourse() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50 to-purple-50 text-gray-900 p-6 font-sans">
-      <header className="flex flex-col items-center mb-10 max-w-6xl mx-auto py-16">
+      {/* 상단 네비게이션 바 */}
+      <nav className="fixed top-0 left-0 right-0 bg-white border-b-2 border-gray-200 shadow-md z-50">
+        <div className="max-w-7xl mx-auto px-4 py-3">
+          <ul className="flex items-center gap-6 text-sm">
+            <li><a href="https://aimekkum.me/index.html" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">홈</a></li>
+            <li><a href="https://aimekkum.me/ai_edu.html" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">AI 교육자료</a></li>
+            <li><span className="text-indigo-600 font-bold">🚀 AI 10주 코스</span></li>
+            <li><a href="https://aimekkum.me/portfolio.html" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">나의 작업물</a></li>
+            <li><a href="https://aimekkum.me/about.html" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">About</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <header className="flex flex-col items-center mb-10 max-w-6xl mx-auto py-16 pt-24">
         <div className="text-6xl lg:text-7xl mb-6">🌿</div>
         <h1 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">AI MEKKUM LIFE+</h1>
         <p className="text-xl lg:text-2xl text-gray-700 font-light mb-3 tracking-wide">
